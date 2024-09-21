@@ -3,7 +3,7 @@
 <html lang="cn">
 <head>
     <meta charset="utf-8" />
-    <title>Archives | Batappleの隐秘小屋</title>
+    <title>QP二次规划 | Batappleの隐秘小屋</title>
     <meta name="author" content="Bat Apple" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -37,6 +37,10 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+
+
 
 
 
@@ -150,68 +154,34 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            
-<div id="archives">
-    
-    <div id="timeline-wrap" ref="timeline">
+            <div class="article">
+    <div>
+        <h1>QP二次规划</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/9/18
+        </span>
         
-        <div class="timeline" data-title="写在开始">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/9/9</div>
-                <a href="/2024/09/09/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A7%8B/">
-                    <h3>写在开始</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="关于mcu的使用">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/9/10</div>
-                <a href="/2024/09/10/%E5%85%B3%E4%BA%8EMCU%E7%9A%84%E4%BD%BF%E7%94%A8/">
-                    <h3>关于MCU的使用</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="qp二次规划">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/9/18</div>
-                <a href="/2024/09/18/QP%E4%BA%8C%E6%AC%A1%E8%A7%84%E5%88%92/">
-                    <h3>QP二次规划</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="ad学习记录">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/9/21</div>
-                <a href="/2024/09/21/AD%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
-                    <h3>AD学习记录</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
         
     </div>
+    
+    <div class="content" v-pre>
+        <p>最近做东西用到了二次规划，故记录一下</p>
+<h1 id="二次规划的定义"><a href="#二次规划的定义" class="headerlink" title="二次规划的定义"></a>二次规划的定义</h1><p>二次规划，本质上仍是最优化问题，不过二次规划的目标函数是二次函数，而非线性</p>
+<p>如果一个情况&#x2F;系统有n个变量与m个限制，则可以给出如下条件：<br>一个n维向量c<br>一个nxn维的对称矩阵Q<br>一个mxn维的矩阵A<br>一个m维的向量b（限制）<br>则此问题的限制条件为：Ax &lt;&#x3D; b</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
 </div>
 
             <footer id="footer">
@@ -242,6 +212,12 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+
+
     
 </body>
 </html>

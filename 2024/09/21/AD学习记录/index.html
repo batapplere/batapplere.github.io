@@ -3,7 +3,7 @@
 <html lang="cn">
 <head>
     <meta charset="utf-8" />
-    <title>Batappleの隐秘小屋</title>
+    <title>AD学习记录 | Batappleの隐秘小屋</title>
     <meta name="author" content="Bat Apple" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -42,7 +42,9 @@
 
 
 
-<script src="/js/lib/home.js"></script>
+
+
+
 
 <link rel="stylesheet" href="/css/main.css" />
 
@@ -152,40 +154,11 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="home-head">
-    <div
-        id="home-background"
-        ref="homeBackground"
-        data-images="/images/source2.jpg"
-    ></div>
-    <div id="home-info" @click="homeClick">
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="info">
-            <div class="wrap">
-                <h1>Batappleの隐秘小屋</h1>
-                <h3>行于世间的旅者</h3>
-                <h5></h5>
-            </div>
-        </span>
+            <div class="article">
+    <div>
+        <h1>AD学习记录</h1>
     </div>
-</div>
-<div
-    id="home-posts-wrap"
-    ref="homePostsWrap"
-    true
->
-    <div id="home-posts">
-        
-
-<div class="post">
-    <a href="/2024/09/21/AD%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
-        <h2 class="post-title">AD学习记录</h2>
-    </a>
-    <div class="category-and-date">
-        
+    <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
@@ -195,10 +168,9 @@
         
         
     </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>此贴用于记录AD学习的个人要点</p>
+    
+    <div class="content" v-pre>
+        <p>此贴用于记录AD学习的个人要点</p>
 <h1 id="关于不同层（Layer）"><a href="#关于不同层（Layer）" class="headerlink" title="关于不同层（Layer）"></a>关于不同层（Layer）</h1><p>如果是贴片元件，则选择顶层 <strong>“Top Layer”</strong>, 或者底层 <strong>Bottom Layer</strong>，如果是直插件，<em>（此处个人暂时认为是那种杜邦针直插的情况，直接<strong>穿透</strong>整个pcb）</em>则画在“Multi-Layer”上</p>
 <h1 id="关于丝印"><a href="#关于丝印" class="headerlink" title="关于丝印"></a>关于丝印</h1><p>绘制丝印时，应注意丝印离阻焊区域（紫色部分）距离最好保证10mil（大于等于4mil）。否则可能会报规则问题</p>
 <h1 id="关于自定义元件封装"><a href="#关于自定义元件封装" class="headerlink" title="关于自定义元件封装"></a>关于自定义元件封装</h1><p>自行封装元件，是画板的基础，在这一步，我被网上的垃圾教程毒害了足足1小时之久，在此整理一下正常人能看懂的，正常的元件封装流程（愤）</p>
@@ -207,171 +179,13 @@
 <h3 id="2）绘制你的原理图"><a href="#2）绘制你的原理图" class="headerlink" title="2）绘制你的原理图"></a>2）绘制你的原理图</h3><p>没什么好说的，按P，选择你想绘制的图形&#x2F;类型，画完后别忘了加<strong>管脚</strong>，需要注意的是，放置管脚时，鼠标光标的那端是输出端，应当保证输出端朝向图形外部</p>
 <h3 id="3）绘制你的元件PCB图（重要）"><a href="#3）绘制你的元件PCB图（重要）" class="headerlink" title="3）绘制你的元件PCB图（重要）"></a>3）绘制你的元件PCB图（重要）</h3><p>网上的教程，大部分在上面第二步后，就让你去画原理图，之后导入主PCB文件了，然后新人们就会发现，报了一堆错，最后导入PCB的只有一个空空的Sheet。（我元件呢？）实际上，在画完原理图后，你还需要画出这个元件对应的PCB图，并做好<strong>管脚映射</strong>，首先你需要创建PCB Library，跟创建Schematic library差不多，在中间的分歧选项中，选择PCB Library即可<br>具体画法，暂时不写，太麻烦<br>总之，当你画好PCB图后，你的图中应该会有几个Plate（焊盘），并且有<strong>标号</strong>，这里需要让你的<strong>标号</strong>和你元件原理图里管脚的标号<strong>对应</strong>，注意，这里指的标号不是<em>Name</em>，而是<strong>Designator</strong>，之后，在你元件原理图的Properties选项卡里，找到Parameters栏，点击Add按钮，选择Add Footprint，把你刚画好的PCB图利用浏览功能加进去，这里贴心的AD还给你留了管教映射的选项，如果你之前画的太乱，可以依靠这个功能直观、快速的做管脚映射，绑定好后，大工告成，你可以将你做好的元件放进PCB主图里了，开始愉快的布线吧<br><strong>注：这并不涉及三维模型的设置，如果你希望你的元件能在3D视角中展示，那么需要额外导入3D模型，具体模型怎么画，画好怎么导入，等我再学学，有空了再写</strong></p>
 
-            
-        </div>
     </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2024/09/21/AD%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2024/09/18/QP%E4%BA%8C%E6%AC%A1%E8%A7%84%E5%88%92/">
-        <h2 class="post-title">QP二次规划</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/9/18
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>最近做东西用到了二次规划，故记录一下</p>
-<h1 id="二次规划的定义"><a href="#二次规划的定义" class="headerlink" title="二次规划的定义"></a>二次规划的定义</h1><p>二次规划，本质上仍是最优化问题，不过二次规划的目标函数是二次函数，而非线性</p>
-<p>如果一个情况&#x2F;系统有n个变量与m个限制，则可以给出如下条件：<br>一个n维向量c<br>一个nxn维的对称矩阵Q<br>一个mxn维的矩阵A<br>一个m维的向量b（限制）<br>则此问题的限制条件为：Ax &lt;&#x3D; b</p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2024/09/18/QP%E4%BA%8C%E6%AC%A1%E8%A7%84%E5%88%92/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2024/09/10/%E5%85%B3%E4%BA%8EMCU%E7%9A%84%E4%BD%BF%E7%94%A8/">
-        <h2 class="post-title">关于MCU的使用</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/9/10
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>作为本博客的第一篇正式文章，正好刚面试完没多久，趁还没忘记，记录以下自己的想法</p>
-<h1 id="STM32，51，Arduino等嵌入式开发平台-该如何选择？"><a href="#STM32，51，Arduino等嵌入式开发平台-该如何选择？" class="headerlink" title="STM32，51，Arduino等嵌入式开发平台 该如何选择？"></a>STM32，51，Arduino等嵌入式开发平台 该如何选择？</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这是面试时一位老师问的问题:<strong>简述51单片机和32单片机的不同</strong>，很遗憾，由于笔者真正于项目中使用的芯片过少，大部分都集中于STM32，导致没能从很好的角度去回答这个问题，只能通过成本、效率等比较浅显的角度回答，而目前网上的答案大都也是这两方面，闭口不提实际应用过程中的不同，就跟做手机测评一样，如果只是单纯的比硬件配置和价格，不去看系统和芯片调教，也没什么意义，事实上，目前我们所能接触到的嵌入式开发平台越来越多，除了标题提到的3种外，还有Raspberry Pi，ESP，PIC系列<br>由于笔者使用芯片有限，故在此只讨论STM32，MCS-51和Raspberry Pi</p>
-<h2 id="资源的高效利用"><a href="#资源的高效利用" class="headerlink" title="资源的高效利用"></a>资源的高效利用</h2><p>对于STM32，我的第一个想法就是——<strong>引脚真多</strong>，与51相比，很多人STM32的入门芯片——<strong>STM32F103C8</strong>系列，有48个引脚，其中而51系列同为入门芯片的80C51，则只有40个引脚，但它们能够供开发者使用IO引脚都为32个，看到这里，你是否认为高效利用资源的是51?但是，上面的这些情况都只是关于芯片本身的引脚数，并没有提及芯片的实际应用。事实上，在实际使用中，想要实现某个功能，例如</p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2024/09/10/%E5%85%B3%E4%BA%8EMCU%E7%9A%84%E4%BD%BF%E7%94%A8/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2024/09/09/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A7%8B/">
-        <h2 class="post-title">写在开始</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/9/9
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <h1 id="关于本博客的建立"><a href="#关于本博客的建立" class="headerlink" title="关于本博客的建立"></a>关于本博客的建立</h1><p>本博客建立于2024年9月9日，大四上学年<br>其实很早的时候，我就想过建立一个属于自己的博客，用于记录学习心得，代码，或者只是日常，甚至是牢骚，不过还好，虽然很晚，但至少我也算是在本科期间成功把网站搭起来了，未来可期.jpg  </p>
-<h1 id="关于本网站的介绍"><a href="#关于本网站的介绍" class="headerlink" title="关于本网站的介绍"></a>关于本网站的介绍</h1><h2 id="1、网站基础"><a href="#1、网站基础" class="headerlink" title="1、网站基础"></a>1、网站基础</h2><p>本网站基于<strong>github page</strong>, <strong><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">hexo</a></strong> 以及 <strong><a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX主题</a></strong> 搭建，在此感谢工具的创作者，这为我搭建网站节省了很多时间，本网页的github页面在<a target="_blank" rel="noopener" href="https://github.com/batapplere/batapplere.github.io">这里</a>.  </p>
-<h2 id="2、网站内容"><a href="#2、网站内容" class="headerlink" title="2、网站内容"></a>2、网站内容</h2><p>本网站主要涉及领域为电控相关，主要使用芯片为<strong>STM32</strong>，使用代码库为<strong>标准库</strong>，不排除之后学习更多芯片的可能</p>
-<h3 id="1、基础相关"><a href="#1、基础相关" class="headerlink" title="1、基础相关"></a>1、基础相关</h3><p>主要分享一些芯片功能的学习过程与心得，例如<strong>I2C</strong>，<strong>SPI</strong>，<strong>DMA</strong>等等</p>
-<h3 id="2、算法相关"><a href="#2、算法相关" class="headerlink" title="2、算法相关"></a>2、算法相关</h3><p>主要记录一些控制算法的学习过程</p>
-<h3 id="3、杂项相关"><a href="#3、杂项相关" class="headerlink" title="3、杂项相关"></a>3、杂项相关</h3><p>日常的一些感受，等等</p>
-<h2 id="3、结束"><a href="#3、结束" class="headerlink" title="3、结束"></a>3、结束</h2><p>就先写这么多，毕竟这个博客今天也才刚刚建立，未来还很长，日后应该会不断更新，当然，在这之前，我还得多看几遍<strong>markdown</strong>语法的教程（菜）</p>
-<p>2024.9.21补充：你应该会在这个网站上看到一些文章只有开头或者只有一半，这不是bug，单纯是我没写完，懒得单独摘出来了 后面会补的（在补了在补了）</p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2024/09/09/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A7%8B/" class="go-post">阅读全文</a>
-</div>
-
-
-        <div class="page-current">
     
-    <span class="current">1</span>
     
     
     
     
-</div>
-
-    </div>
     
-    <div id="home-card">
-        <div id="card-style">
-    <div id="card-div">
-        <div class="avatar">
-            <img src="/images/icon2.jpg" alt="avatar" />
-        </div>
-        <div class="name">Bat Apple</div>
-        <div class="description">
-            <p>永远保持热爱<br>永远保持一颗鲜活跳动的心</p>
-<p>contact me:<br><a href="mailto:&#x6d;&#x65;&#x72;&#109;&#x61;&#x6e;&#116;&#114;&#x65;&#97;&#115;&#x61;&#x64;&#x65;&#x6e;&#x33;&#x33;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#x6d;&#x65;&#x72;&#109;&#x61;&#x6e;&#116;&#114;&#x65;&#97;&#115;&#x61;&#x64;&#x65;&#x6e;&#x33;&#x33;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a></p>
-
-        </div>
-        
-        <div class="icon-links">
-            
-            <span class="icon-link">
-                <a target="_blank" rel="noopener" href="https://github.com/batapplere">
-                    <i
-                        class="fa-brands fa-github fa-fw"
-                    ></i>
-                </a>
-            </span>
-            
-        </div>
-        
-        
-        <div class="friend-links">
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://www.batapple.xyz/">Support me (fake)</a>
-            </div>
-            
-        </div>
-        
-    </div>
-</div>
-
-    </div>
     
 </div>
 
@@ -403,6 +217,12 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+
+
     
 </body>
 </html>

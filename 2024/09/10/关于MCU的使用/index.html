@@ -3,7 +3,7 @@
 <html lang="cn">
 <head>
     <meta charset="utf-8" />
-    <title>Archives | Batappleの隐秘小屋</title>
+    <title>关于MCU的使用 | Batappleの隐秘小屋</title>
     <meta name="author" content="Bat Apple" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -37,6 +37,10 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+
+
 
 
 
@@ -150,68 +154,34 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            
-<div id="archives">
-    
-    <div id="timeline-wrap" ref="timeline">
+            <div class="article">
+    <div>
+        <h1>关于MCU的使用</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/9/10
+        </span>
         
-        <div class="timeline" data-title="写在开始">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/9/9</div>
-                <a href="/2024/09/09/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A7%8B/">
-                    <h3>写在开始</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="关于mcu的使用">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/9/10</div>
-                <a href="/2024/09/10/%E5%85%B3%E4%BA%8EMCU%E7%9A%84%E4%BD%BF%E7%94%A8/">
-                    <h3>关于MCU的使用</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="qp二次规划">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/9/18</div>
-                <a href="/2024/09/18/QP%E4%BA%8C%E6%AC%A1%E8%A7%84%E5%88%92/">
-                    <h3>QP二次规划</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="ad学习记录">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/9/21</div>
-                <a href="/2024/09/21/AD%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
-                    <h3>AD学习记录</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
         
     </div>
+    
+    <div class="content" v-pre>
+        <p>作为本博客的第一篇正式文章，正好刚面试完没多久，趁还没忘记，记录以下自己的想法</p>
+<h1 id="STM32，51，Arduino等嵌入式开发平台-该如何选择？"><a href="#STM32，51，Arduino等嵌入式开发平台-该如何选择？" class="headerlink" title="STM32，51，Arduino等嵌入式开发平台 该如何选择？"></a>STM32，51，Arduino等嵌入式开发平台 该如何选择？</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这是面试时一位老师问的问题:<strong>简述51单片机和32单片机的不同</strong>，很遗憾，由于笔者真正于项目中使用的芯片过少，大部分都集中于STM32，导致没能从很好的角度去回答这个问题，只能通过成本、效率等比较浅显的角度回答，而目前网上的答案大都也是这两方面，闭口不提实际应用过程中的不同，就跟做手机测评一样，如果只是单纯的比硬件配置和价格，不去看系统和芯片调教，也没什么意义，事实上，目前我们所能接触到的嵌入式开发平台越来越多，除了标题提到的3种外，还有Raspberry Pi，ESP，PIC系列<br>由于笔者使用芯片有限，故在此只讨论STM32，MCS-51和Raspberry Pi</p>
+<h2 id="资源的高效利用"><a href="#资源的高效利用" class="headerlink" title="资源的高效利用"></a>资源的高效利用</h2><p>对于STM32，我的第一个想法就是——<strong>引脚真多</strong>，与51相比，很多人STM32的入门芯片——<strong>STM32F103C8</strong>系列，有48个引脚，其中而51系列同为入门芯片的80C51，则只有40个引脚，但它们能够供开发者使用IO引脚都为32个，看到这里，你是否认为高效利用资源的是51?但是，上面的这些情况都只是关于芯片本身的引脚数，并没有提及芯片的实际应用。事实上，在实际使用中，想要实现某个功能，例如</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
 </div>
 
             <footer id="footer">
@@ -242,6 +212,12 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+
+
     
 </body>
 </html>
