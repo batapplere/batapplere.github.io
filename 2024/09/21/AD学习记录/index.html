@@ -172,6 +172,13 @@
     <div class="content" v-pre>
         <p>此贴用于记录AD学习的个人要点</p>
 <h1 id="关于不同层（Layer）"><a href="#关于不同层（Layer）" class="headerlink" title="关于不同层（Layer）"></a>关于不同层（Layer）</h1><p>如果是贴片元件，则选择顶层 <strong>“Top Layer”</strong>, 或者底层 <strong>Bottom Layer</strong>，如果是直插件，<em>（此处个人暂时认为是那种杜邦针直插的情况，直接<strong>穿透</strong>整个pcb）</em>则画在“Multi-Layer”上</p>
+<h1 id="关于PCB走线的设计"><a href="#关于PCB走线的设计" class="headerlink" title="关于PCB走线的设计"></a>关于PCB走线的设计</h1><h2 id="布线的方式"><a href="#布线的方式" class="headerlink" title="布线的方式"></a>布线的方式</h2><p>布线应尽可能避免锐角</p>
+<h2 id="回路的设计"><a href="#回路的设计" class="headerlink" title="回路的设计"></a>回路的设计</h2><p>电流回路覆盖的面积要尽可能小，即电流从正级入-&gt;负极出这段环路所包含的面积</p>
+<h2 id="信号线的设计"><a href="#信号线的设计" class="headerlink" title="信号线的设计"></a>信号线的设计</h2><h3 id="对于一般-全部信号线"><a href="#对于一般-全部信号线" class="headerlink" title="对于一般&#x2F;全部信号线"></a>对于一般&#x2F;全部信号线</h3><p>信号线应尽可能避开电流线，如果不得不靠近，或者较近的情况，需保证信号传递方向与电流方向一致，从而减少干扰 *</p>
+<h3 id="对于差分信号线"><a href="#对于差分信号线" class="headerlink" title="对于差分信号线"></a>对于差分信号线</h3><p>差分信号线应保证长度尽可能相同，并且两条信号线应尽可能靠近</p>
+<h2 id="过孔的设计-没有经过原理查证的会用-标注"><a href="#过孔的设计-没有经过原理查证的会用-标注" class="headerlink" title="过孔的设计(没有经过原理查证的会用*标注)"></a>过孔的设计(没有经过原理查证的会用*标注)</h2><p>根据网上的信息，一般过孔之间（孔边到孔边）不能小于6mil，最好大于8mil，也有说最小为7mil的</p>
+<p>此外，过孔的载流能力需要额外考虑，具体请参考这篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/huibei_wuhan/article/details/132403348">文章</a>.</p>
+<h2 id="电容的设计"><a href="#电容的设计" class="headerlink" title="电容的设计"></a>电容的设计</h2><p>电容应尽可能的靠近所连接的元器件，太远的话电容的效果不大 *</p>
 <h1 id="关于丝印"><a href="#关于丝印" class="headerlink" title="关于丝印"></a>关于丝印</h1><p>绘制丝印时，应注意丝印离阻焊区域（紫色部分）距离最好保证10mil（大于等于4mil）。否则可能会报规则问题</p>
 <h1 id="关于自定义元件封装"><a href="#关于自定义元件封装" class="headerlink" title="关于自定义元件封装"></a>关于自定义元件封装</h1><p>自行封装元件，是画板的基础，在这一步，我被网上的垃圾教程毒害了足足1小时之久，在此整理一下正常人能看懂的，正常的元件封装流程（愤）</p>
 <h2 id="1、定义元件原理图"><a href="#1、定义元件原理图" class="headerlink" title="1、定义元件原理图"></a>1、定义元件原理图</h2><h3 id="1）创建元件原理图库（Schematic-library）"><a href="#1）创建元件原理图库（Schematic-library）" class="headerlink" title="1）创建元件原理图库（Schematic library）"></a>1）创建元件原理图库（Schematic library）</h3><p>（注意：这一步根据用户AD版本的不同，过程略有区别）</p>
